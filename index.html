@@ -1487,12 +1487,19 @@
 
         .contact-card:hover::before {
             left: 100%;
+            background: linear-gradient(90deg, transparent, rgba(9, 105, 218, 0.2), rgba(31, 136, 61, 0.2), rgba(210, 153, 34, 0.2), transparent);
         }
 
         .contact-card:hover {
-            transform: translateX(10px);
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+            transform: translateX(10px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(9, 105, 218, 0.3), 0 0 20px rgba(31, 136, 61, 0.2);
             border-color: var(--primary);
+            background: linear-gradient(135deg, var(--card-bg) 0%, rgba(9, 105, 218, 0.05) 50%, var(--card-bg) 100%);
+        }
+
+        [data-theme="dark"] .contact-card:hover {
+            box-shadow: 0 10px 30px rgba(88, 166, 255, 0.3), 0 0 20px rgba(63, 185, 80, 0.2);
+            background: linear-gradient(135deg, var(--card-bg) 0%, rgba(88, 166, 255, 0.05) 50%, var(--card-bg) 100%);
         }
 
         .contact-card i {
@@ -1509,49 +1516,106 @@
             color: var(--primary);
         }
 
-        /* LinkedIn - Original Blue */
+        /* Instagram - Colorful hover */
+        .contact-card a[href*="instagram"] i {
+            color: #E4405F;
+        }
+
+        .contact-card a[href*="instagram"]:hover i {
+            color: #ffffff;
+        }
+
+        .contact-card a[href*="instagram"]:hover {
+            background: linear-gradient(135deg, #E4405F, #F56040, #FCB045);
+        }
+
+        /* LinkedIn - Original Blue with colorful hover */
         .contact-card a[href*="linkedin"] i {
             color: #0077b5;
         }
 
         .contact-card a[href*="linkedin"]:hover i {
-            color: #005885;
+            color: #ffffff;
         }
 
-        /* GitHub - Original Black */
+        .contact-card a[href*="linkedin"]:hover {
+            background: linear-gradient(135deg, #0077b5, #0969da, #1f883d);
+        }
+
+        [data-theme="dark"] .contact-card a[href*="linkedin"]:hover {
+            background: linear-gradient(135deg, #0077b5, #58a6ff, #3fb950);
+        }
+
+        /* GitHub - Original Black with colorful hover */
         .contact-card a[href*="github"] i {
             color: #000000;
         }
 
         .contact-card a[href*="github"]:hover i {
-            color: #333333;
+            color: #ffffff;
         }
 
-        /* Email - Gmail Red */
+        .contact-card a[href*="github"]:hover {
+            background: linear-gradient(135deg, #000000, #333333, #0969da);
+        }
+
+        [data-theme="dark"] .contact-card a[href*="github"] {
+            color: #f0f6fc;
+        }
+
+        [data-theme="dark"] .contact-card a[href*="github"]:hover {
+            background: linear-gradient(135deg, #24292f, #58a6ff, #3fb950);
+        }
+
+        /* Email - Gmail Red with colorful hover */
         .contact-card a[href*="mailto"] i {
             color: #ea4335;
         }
 
         .contact-card a[href*="mailto"]:hover i {
-            color: #d33b2c;
+            color: #ffffff;
         }
 
-        /* Phone - WhatsApp Green */
+        .contact-card a[href*="mailto"]:hover {
+            background: linear-gradient(135deg, #ea4335, #d29922, #1f883d);
+        }
+
+        [data-theme="dark"] .contact-card a[href*="mailto"]:hover {
+            background: linear-gradient(135deg, #ea4335, #d29922, #58a6ff);
+        }
+
+        /* Phone - WhatsApp Green with colorful hover */
         .contact-card a[href*="tel"] i {
             color: #25d366;
         }
 
         .contact-card a[href*="tel"]:hover i {
-            color: #1da851;
+            color: #ffffff;
         }
 
-        /* Telegram - Original Blue */
+        .contact-card a[href*="tel"]:hover {
+            background: linear-gradient(135deg, #25d366, #1f883d, #0969da);
+        }
+
+        [data-theme="dark"] .contact-card a[href*="tel"]:hover {
+            background: linear-gradient(135deg, #25d366, #3fb950, #58a6ff);
+        }
+
+        /* Telegram - Original Blue with colorful hover */
         .contact-card a[href*="telegram"] i {
             color: #229ED9;
         }
 
         .contact-card a[href*="telegram"]:hover i {
-            color: #1e8bc4;
+            color: #ffffff;
+        }
+
+        .contact-card a[href*="telegram"]:hover {
+            background: linear-gradient(135deg, #229ED9, #0969da, #1f883d);
+        }
+
+        [data-theme="dark"] .contact-card a[href*="telegram"]:hover {
+            background: linear-gradient(135deg, #229ED9, #58a6ff, #3fb950);
         }
 
         .contact-card h4 {
@@ -1672,8 +1736,9 @@
             background: var(--card-bg);
             padding: 3rem 5%;
             text-align: center;
-            border-top: 1px solid var(--border);
+            border-top: 2px solid var(--border);
             margin-top: 4rem;
+            box-shadow: 0 -4px 20px var(--shadow);
         }
 
         .footer-social {
@@ -1692,63 +1757,118 @@
             align-items: center;
             justify-content: center;
             color: var(--text-primary);
-            transition: all 0.3s;
-            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            border: 2px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-social a::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0969da, #1f883d, #d29922);
+            transform: translate(-50%, -50%);
+            transition: width 0.5s ease, height 0.5s ease;
+            z-index: -1;
+        }
+
+        [data-theme="dark"] .footer-social a::before {
+            background: linear-gradient(135deg, #58a6ff, #3fb950, #d29922);
         }
 
         .footer-social a:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 30px rgba(9, 105, 218, 0.4);
+            border-color: transparent;
         }
 
-        /* GitHub - Original Black */
+        [data-theme="dark"] .footer-social a:hover {
+            box-shadow: 0 10px 30px rgba(88, 166, 255, 0.4);
+        }
+
+        .footer-social a:hover::before {
+            width: 200%;
+            height: 200%;
+        }
+
+        /* GitHub - Original Black with colorful hover */
         .footer-social a[href*="github"] {
             color: #000000;
         }
 
         .footer-social a[href*="github"]:hover {
-            background: #000000;
+            background: linear-gradient(135deg, #000000, #333333, #0969da);
             color: white;
         }
 
-        /* LinkedIn - Original Blue */
+        [data-theme="dark"] .footer-social a[href*="github"] {
+            color: #f0f6fc;
+        }
+
+        [data-theme="dark"] .footer-social a[href*="github"]:hover {
+            background: linear-gradient(135deg, #24292f, #58a6ff, #3fb950);
+            color: white;
+        }
+
+        /* LinkedIn - Original Blue with colorful hover */
         .footer-social a[href*="linkedin"] {
             color: #0077b5;
         }
 
         .footer-social a[href*="linkedin"]:hover {
-            background: #0077b5;
+            background: linear-gradient(135deg, #0077b5, #0969da, #1f883d);
             color: white;
         }
 
-        /* Email - Gmail Red */
+        [data-theme="dark"] .footer-social a[href*="linkedin"]:hover {
+            background: linear-gradient(135deg, #0077b5, #58a6ff, #3fb950);
+        }
+
+        /* Email - Gmail Red with colorful hover */
         .footer-social a[href*="mailto"] {
             color: #ea4335;
         }
 
         .footer-social a[href*="mailto"]:hover {
-            background: #ea4335;
+            background: linear-gradient(135deg, #ea4335, #d29922, #1f883d);
             color: white;
         }
 
-        /* Phone - Green */
+        [data-theme="dark"] .footer-social a[href*="mailto"]:hover {
+            background: linear-gradient(135deg, #ea4335, #d29922, #58a6ff);
+        }
+
+        /* Phone - Green with colorful hover */
         .footer-social a[href*="tel"] {
             color: #25d366;
         }
 
         .footer-social a[href*="tel"]:hover {
-            background: #25d366;
+            background: linear-gradient(135deg, #25d366, #1f883d, #0969da);
             color: white;
         }
 
-        /* Telegram - Original Blue */
+        [data-theme="dark"] .footer-social a[href*="tel"]:hover {
+            background: linear-gradient(135deg, #25d366, #3fb950, #58a6ff);
+        }
+
+        /* Telegram - Original Blue with colorful hover */
         .footer-social a[href*="telegram"] {
             color: #229ED9;
         }
 
         .footer-social a[href*="telegram"]:hover {
-            background: #229ED9;
+            background: linear-gradient(135deg, #229ED9, #0969da, #1f883d);
             color: white;
+        }
+
+        [data-theme="dark"] .footer-social a[href*="telegram"]:hover {
+            background: linear-gradient(135deg, #229ED9, #58a6ff, #3fb950);
         }
 
         .footer-links {
@@ -1760,13 +1880,43 @@
         }
 
         .footer-links a {
-            color: var(--text-secondary);
+            color: var(--text-primary);
             text-decoration: none;
-            transition: color 0.3s;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .footer-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0969da, #1f883d, #d29922);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        [data-theme="dark"] .footer-links a::before {
+            background: linear-gradient(90deg, #58a6ff, #3fb950, #d29922);
         }
 
         .footer-links a:hover {
             color: var(--primary);
+            background: rgba(9, 105, 218, 0.1);
+            transform: translateY(-2px);
+        }
+
+        [data-theme="dark"] .footer-links a:hover {
+            background: rgba(88, 166, 255, 0.15);
+        }
+
+        .footer-links a:hover::before {
+            width: 80%;
         }
 
         /* Animations */
@@ -1791,10 +1941,35 @@
             box-shadow: none;
         }
 
-        /* Modern hover accents */
-        .btn:hover, .project-card:hover, .skill-category:hover, .contact-card:hover {
+        /* Modern hover accents with colorful effects */
+        .btn:hover {
             transform: translateY(-4px);
             transition: transform 0.2s ease;
+            box-shadow: 0 8px 20px rgba(9, 105, 218, 0.3), 0 0 15px rgba(31, 136, 61, 0.2);
+        }
+
+        [data-theme="dark"] .btn:hover {
+            box-shadow: 0 8px 20px rgba(88, 166, 255, 0.3), 0 0 15px rgba(63, 185, 80, 0.2);
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px) scale(1.01);
+            transition: transform 0.2s ease;
+            box-shadow: 0 10px 30px rgba(9, 105, 218, 0.25), 0 0 20px rgba(31, 136, 61, 0.15);
+        }
+
+        [data-theme="dark"] .project-card:hover {
+            box-shadow: 0 10px 30px rgba(88, 166, 255, 0.25), 0 0 20px rgba(63, 185, 80, 0.15);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-4px);
+            transition: transform 0.2s ease;
+            box-shadow: 0 8px 20px rgba(9, 105, 218, 0.25), 0 0 15px rgba(31, 136, 61, 0.15);
+        }
+
+        [data-theme="dark"] .skill-category:hover {
+            box-shadow: 0 8px 20px rgba(88, 166, 255, 0.25), 0 0 15px rgba(63, 185, 80, 0.15);
         }
 
         /* Cursor smoke effect */
@@ -2036,7 +2211,7 @@
         <div class="about-content">
             <div class="about-intro">
                 <p style="margin-bottom:0; font-size:1.05rem; color:var(--text-secondary); line-height:1.8;">
-                    Men, kuchli va xavsiz backend tizimlar yaratuvchi hamda frontend dasturiy ta'minot muhandisiman. Qolaversa, Aiogram yordamida Telegram bot yarataman  Asosiy texnologiyalar : Python (Flask, Aiogram), SQLite va Linux.  O'zimdan kuchli bo'lgan bo'lgan communitylarda ishlashni qadrlayman 
+                    Men, kuchli va xavsiz backend tizimlar yaratuvchi hamda frontend dasturiy ta'minot muhandisiman. Qolaversa, Aiogram yordamida Telegram bot yarataman  Asosiy texnologiyalar : Python (Flask, Aiogram), SQLite.  O'zimdan kuchli bo'lgan bo'lgan communitylarda ishlashni qadrlayman 
                 </p>
             </div>
 
@@ -2128,7 +2303,6 @@
                         <li>10+ mijoz loyihalarini yakunlab, talabdan prodga qadar to'liq siklni bajardim</li>
                         <li>Telegram botlari (Aiogram) va Flask/Django backend API'lar yaratdim</li>
                         <li>Frontend integratsiyasi, autentifikatsiya, to'lov va admin panel funksiyalarini joriy qildim</li>
-                        <li>Docker va Linux asosida deploy, monitoring va versiyalash jarayonlarini yo'lga qo'ydim</li>
                         <li>Mijozlar bilan rasmiy muloqot, texnik hujjatlashtirish va timeline boshqaruvini olib bordim</li>
                     </ul>
                 </div>
@@ -2249,8 +2423,8 @@
                     Texnologiyalarni o'rganish va amalda qo'llash orqali ko'nikmalarimni kengaytirib boraman.
                 </p>
                 <div class="project-links">
-                    <a href="https://t.me/shaxirorkarimberdiyev" target="_blank" class="project-link project-link-secondary">
-                        <i class="fas fa-envelope"></i> Loyihangizni muhokama qilamiz — @shaxirorkarimberdiyev
+                    <a href="https://t.me/shaxriyorkarimberdiyev" target="_blank" class="project-link project-link-secondary">
+                        <i class="fas fa-envelope"></i> Loyihangizni muhokama qilamiz — @shaxriyorkarimberdiyev
                     </a>
                 </div>
             </div>
@@ -2349,11 +2523,11 @@
                 </div>
             </a>
 
-            <a href="https://t.me/shaxirorkarimberdiyev" target="_blank" class="contact-card" style="text-decoration: none; color: inherit;">
+            <a href="https://t.me/shaxriyorkarimberdiyev" target="_blank" class="contact-card" style="text-decoration: none; color: inherit;">
                 <i class="fab fa-telegram"></i>
                 <div>
                     <h4>Telegram</h4>
-                    <span style="color: var(--primary);">@shaxirorkarimberdiyev</span>
+                    <span style="color: var(--primary);">@shaxriyorkarimberdiyev</span>
                 </div>
             </a>
 
@@ -2402,16 +2576,16 @@
     <!-- Footer -->
     <footer>
         <div class="footer-social">
-            <a href="https://github.com/NodirUstoz" target="_blank" title="GitHub">
+            <a href="https://github.com/shaxriyor-wu" target="_blank" title="GitHub">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="https://t.me/NodirOdilov" target="_blank" title="Telegram">
+            <a href="https://t.me/shaxriyorkarimberdiyev" target="_blank" title="Telegram">
                 <i class="fab fa-telegram"></i>
             </a>
-            <a href="mailto:nodirodilovuz@gmail.com" title="Email">
+            <a href="mailto:shaxriyorkarimberdiyev@gmail.com" title="Email">
                 <i class="fas fa-envelope"></i>
             </a>
-            <a href="tel:+998971005080" title="Phone">
+            <a href="tel:+998880620710" title="Phone">
                 <i class="fas fa-phone"></i>
             </a>
 
@@ -2427,7 +2601,7 @@
             <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
         </div>
 
-        <p style="color: var(--text-muted); margin-top: 2rem;">
+        <p style="color: var(--text-primary); margin-top: 2rem; font-weight: 500; font-size: 1rem;">
             © 2025 Shaxriyor Karimberdiyev. All rights reserved.
         </p>
     </footer>
@@ -2637,7 +2811,7 @@
                 },
                 about: {
                     title: 'About Me',
-                    description: "I'm a software engineer focused on building secure, scalable backends and automation. My core stack is Python (FastAPI, Django, Flask) with PostgreSQL, Docker, and Linux, plus Telegram automation using Aiogram. I care about clean architecture, performance, and pragmatic security.",
+                    description: "I'm a software engineer focused on building secure, scalable backends and automation. My core stack is Python (FastAPI, Django, Flask) with PostgreSQL, plus Telegram automation using Aiogram. I care about clean architecture, performance, and pragmatic security.",
                     description2: "I've architected distributed systems handling millions of requests, built AI-powered automation that reduced operational overhead by 60%, and led engineering teams to deliver zero-downtime deployments across production environments serving 100K+ users.",
                     description3: 'Interests: backend systems, AI-assisted tooling, and cybersecurity. If you\'re solving real problems at scale, let\'s talk.',
                     education: {
@@ -2698,7 +2872,6 @@
                             'Completed 10+ client projects end‑to‑end from requirements to production',
                             'Built Telegram bots (Aiogram) and Flask/Django backend APIs',
                             'Implemented frontend integration, authentication, payments, and admin panels',
-                            'Set up Docker/Linux deployments, monitoring, and versioning workflows',
                             'Managed client communication, technical documentation, and delivery timelines'
                         ]
                     }
@@ -2780,7 +2953,7 @@
                 },
                 about: {
                     title: 'Men haqimda',
-                    description: 'Men xavfsiz va kengaytiriladigan backend tizimlar va frontend dasturiy ta\'minot muhandisiman. Asosiy texnologiyalarim: Python (FastAPI, Django, Flask), PostgreSQL, Docker va Linux. Shuningdek, Aiogram yordamida Telegram Bot yarataman. Toza arxitektura, yuqori samaradorlik va pragmatik xavfsizlikni qadrlayman.',
+                    description: 'Men xavfsiz va kengaytiriladigan backend tizimlar va frontend dasturiy ta\'minot muhandisiman. Asosiy texnologiyalarim: Python (FastAPI, Django, Flask), PostgreSQL. Shuningdek, Aiogram yordamida Telegram Bot yarataman. Toza arxitektura, yuqori samaradorlik va pragmatik xavfsizlikni qadrlayman.',
                     description2: 'Millionlab so\'rovlarni boshqaradigan taqsimlangan tizimlarni loyihalashtirdim, operatsion xarajatlarni 60% ga kamaytirgan AI-yordamchi avtomatlashtirishni qurdim va 100,000+ foydalanuvchilarga xizmat ko\'rsatadigan ishlab chiqarish muhitlarida zero-downtime deploylarni amalga oshirish uchun muhandislik jamoalarini boshqardim.',
                     description3: 'Qiziqish sohalarim: backend tizimlar, frontend dasturiy ta\'minot hamda AI. Agar siz haqiqiy muammolarni keng miqyosda hal qilayotgan bo\'lsangiz, keling suhbatlashamiz.',
                     education: {
@@ -2833,9 +3006,8 @@
                         period: '2024 — Hozirgacha',
                         description: [
                             'Talabdan ishlab chiqarishgacha 10+ mijoz loyihalarini yakunladim',
-                            'Telegram botlari (Aiogram) va Flask/Django backend API’lar qurdim',
-                            'Frontend integratsiyasi, autentifikatsiya, to‘lov va admin panel funksiyalarini joriy qildim',
-                            'Docker/Linux asosida deploy, monitoring va versiyalash jarayonlarini yo‘lga qo‘ydim',
+                            'Telegram botlari (Aiogram) va Flask/Django backend API\'lar qurdim',
+                            'Frontend integratsiyasi, autentifikatsiya, to\'lov va admin panel funksiyalarini joriy qildim',
                             'Mijozlar bilan rasmiy muloqot, texnik hujjatlar va timeline boshqaruvini olib bordim'
                         ]
                     },
@@ -2858,7 +3030,7 @@
                         description: [
                             'OOP tamoyillaridan foydalanib Python\'da kengaytiriladigan veb-yechimlarni ishlab chiqdim',
                             'Ma\'lumotlar bazasi so\'rovlarini optimallashtirib, ishlash tezligini 40% ga yaxshiladim (sahifa yuklanish vaqti: 30→70)',
-                            'Optimallashtirilgan dasturlash uchun Git, Linux, Docker va relatsion ma\'lumotlar bazalaridan foydalandim',
+                            'Optimallashtirilgan dasturlash uchun Git va relatsion ma\'lumotlar bazalaridan foydalandim',
                             'Ko\'plab mijoz ilovalariga xizmat ko\'rsatish uchun REST API\'larni yaratdim va qo\'llab-quvvatladim'
                         ]
                     },
@@ -2969,7 +3141,7 @@
                 },
                 about: {
                     title: 'Sobre mí',
-                    description: 'Soy ingeniero de software centrado en backends seguros y frontend. También creo bots de Telegram con Aiogram. Tecnologías: Python (Flask, Aiogram), SQLite y Linux. Valoro trabajar en comunidades fuertes.',
+                    description: 'Soy ingeniero de software centrado en backends seguros y frontend. También creo bots de Telegram con Aiogram. Tecnologías: Python (Flask, Aiogram), SQLite. Valoro trabajar en comunidades fuertes.',
                     description2: '', description3: '',
                     education: { masters: '', bachelors: '', university: '', focus: '', courses: '', gpa: '', mastersPeriod: '', bachelorsPeriod: '', schoolStudent: { title: 'Estudiante de escuela', degree: 'Actualmente estudiando en la escuela', age: '17 años', description: 'Aún no tengo título universitario — estudio en la escuela y trabajo en proyectos prácticos.' } },
                     skills: { title: 'Habilidades blandas', languages: 'Idiomas', softSkills: ['Liderazgo','Trabajo en equipo','Comunicación','Autoestudio','Trabajo profundo','Creatividad','Escucha activa','Gestión del tiempo','Toma de decisiones','Mentoría'], languageLevels: { native: 'Nativo', advanced: 'Avanzado', fluent: 'Fluido' } },
@@ -2986,7 +3158,6 @@
                             'Completé 10+ proyectos de clientes de punta a punta, de requisitos a producción',
                             'Construí bots de Telegram (Aiogram) y APIs backend con Flask/Django',
                             'Implementé integración frontend, autenticación, pagos y paneles de administración',
-                            'Configuré despliegues en Docker/Linux, monitoreo y flujos de versionado',
                             'Gestioné comunicación con clientes, documentación técnica y cronogramas de entrega'
                         ]
                     }
@@ -3050,7 +3221,7 @@
                 },
                 about: {
                     title: 'Обо мне',
-                    description: 'Я инженер-программист, сосредоточенный на создании безопасных и масштабируемых backend-систем и автоматизации. Основные технологии: Python (FastAPI, Django, Flask), PostgreSQL, Docker и Linux. Также реализую автоматизацию Telegram с помощью Aiogram. Ценю чистую архитектуру, высокую производительность и прагматичную безопасность.',
+                    description: 'Я инженер-программист, сосредоточенный на создании безопасных и масштабируемых backend-систем и автоматизации. Основные технологии: Python (FastAPI, Django, Flask), PostgreSQL. Также реализую автоматизацию Telegram с помощью Aiogram. Ценю чистую архитектуру, высокую производительность и прагматичную безопасность.',
                     description2: 'Я проектировал распределенные системы, обрабатывающие миллионы запросов, создавал AI-автоматизацию, которая снизила операционные расходы на 60%, и руководил инженерными командами для реализации zero-downtime развертываний в продакшн средах, обслуживающих 100,000+ пользователей.',
                     description3: 'Области интересов: backend-системы, AI-инструменты и кибербезопасность. Если вы решаете реальные проблемы в масштабе, давайте поговорим.',
                     education: {
@@ -3111,7 +3282,6 @@
                             'Выполнил 10+ клиентских проектов от требований до продакшена',
                             'Разработал Telegram‑ботов (Aiogram) и backend API на Flask/Django',
                             'Реализовал фронтенд‑интеграцию, аутентификацию, платежи и админ‑панели',
-                            'Настроил деплой на Docker/Linux, мониторинг и процессы версионирования',
                             'Вёл коммуникацию с заказчиками, техдокументацию и графики поставок'
                         ]
                     },
@@ -3134,7 +3304,7 @@
                         description: [
                             'Разрабатывал масштабируемые веб-решения на Python с использованием принципов ООП',
                             'Оптимизировал запросы к базе данных, улучшив производительность на 40% (время загрузки страницы: 30→70)',
-                            'Использовал Git, Linux, Docker и реляционные базы данных для оптимизированной разработки',
+                            'Использовал Git и реляционные базы данных для оптимизированной разработки',
                             'Создавал и поддерживал REST API для обслуживания множественных клиентских приложений'
                         ]
                     },
