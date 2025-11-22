@@ -19,7 +19,7 @@ const Projects = () => {
       title: t.projects.openDevUZ.title,
       description: t.projects.openDevUZ.description,
       tags: ['Python', 'Flask', 'Frontend', 'SQLite'],
-      link: 'https://opendev.alwaysdata.net/',
+      link: 'https://open-dev.vercel.app/',
       linkText: t.projects.openDevUZ.visit,
       isExternal: true
     },

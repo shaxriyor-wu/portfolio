@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { LanguageProvider } from './contexts/LanguageContext'
 import Navigation from './components/Navigation'
