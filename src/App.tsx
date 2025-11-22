@@ -1,0 +1,40 @@
+import { useState, useEffect } from 'react'
+import { ThemeProvider } from './contexts/ThemeContext'
+import { LanguageProvider } from './contexts/LanguageContext'
+import Navigation from './components/Navigation'
+import Hero from './components/Hero'
+import About from './components/About'
+import Experience from './components/Experience'
+import Projects from './components/Projects'
+import Skills from './components/Skills'
+import Certifications from './components/Certifications'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
+
+function App() {
+  return (
+    <ThemeProvider>
+      <LanguageProvider>
+        <div className="app">
+          <div className="bg-gradient"></div>
+          <Navigation />
+          <main>
+            <Hero />
+            <About />
+            <Experience />
+            <Projects />
+            <Skills />
+            <Certifications />
+            <Contact />
+          </main>
+          <Footer />
+          <ScrollToTop />
+        </div>
+      </LanguageProvider>
+    </ThemeProvider>
+  )
+}
+
+export default App
+
