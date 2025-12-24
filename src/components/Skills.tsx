@@ -5,8 +5,8 @@ const Skills = () => {
   const { t } = useLanguage()
 
   const skills = [
-    'Python', 'Aiogram', 'SQLite', 'Django', 'Flask', 
-    'JavaScript', 'ReactJS', 'HTML', 'CSS'
+    'Python', 'Aiogram', 'SQLite', 'Django', 
+    'PostgreSQL', 'HTML', 'CSS'
   ]
 
   return (

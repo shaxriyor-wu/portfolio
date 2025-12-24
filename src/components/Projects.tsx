@@ -9,7 +9,7 @@ const Projects = () => {
       icon: 'fa-futbol',
       title: t.projects.javaefootball.title,
       description: t.projects.javaefootball.description,
-      tags: ['ReactJS', 'Flask', 'SQLite', 'Docker', 'Full-Stack'],
+      tags: ['ReactJS', 'Django', 'SQLite', 'Docker', 'Full-Stack'],
       link: 'https://www.javaefootball.com',
       linkText: t.projects.javaefootball.visit,
       isExternal: true
@@ -18,7 +18,7 @@ const Projects = () => {
       icon: 'fa-globe',
       title: t.projects.openDevUZ.title,
       description: t.projects.openDevUZ.description,
-      tags: ['Python', 'Flask', 'Frontend', 'SQLite'],
+      tags: ['Python', 'Django', 'Frontend', 'SQLite'],
       link: 'https://open-dev.vercel.app/',
       linkText: t.projects.openDevUZ.visit,
       isExternal: true
@@ -48,6 +48,33 @@ const Projects = () => {
       tags: ['Python', 'Aiogram', 'Telegram Bot API'],
       link: 'https://github.com/shaxriyor-wu/pdf-books',
       linkText: t.projects.pdfBooksBot.viewCode,
+      isExternal: true
+    },
+    {
+      icon: 'fa-graduation-cap',
+      title: t.projects.stanfordacademy.title,
+      description: t.projects.stanfordacademy.description,
+      tags: ['Web Development', 'Responsive Design', 'Educational Platform'],
+      link: 'https://www.stanfordacademy.uz',
+      linkText: t.projects.stanfordacademy.visit,
+      isExternal: true
+    },
+    {
+      icon: 'fa-chart-line',
+      title: t.projects.stanfordacademyCRM.title,
+      description: t.projects.stanfordacademyCRM.description,
+      tags: ['CRM', 'Backend', 'Database Management', 'Python'],
+      link: 'https://crm.stanfordacademy.uz',
+      linkText: t.projects.stanfordacademyCRM.visit,
+      isExternal: true
+    },
+    {
+      icon: 'fa-file-alt',
+      title: t.projects.tricorpCRM.title,
+      description: t.projects.tricorpCRM.description,
+      tags: ['CRM', 'Documentation', 'Multi-tenant', 'Enterprise'],
+      link: 'https://crm.tricorp.uz',
+      linkText: t.projects.tricorpCRM.visit,
       isExternal: true
     }
   ]

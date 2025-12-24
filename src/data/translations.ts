@@ -27,7 +27,7 @@ export const translations: Record<string, Translations> = {
     },
     about: {
       title: 'About Me',
-      description: "I'm a software engineer focused on building secure, scalable backends and automation. My core stack is Python (Flask, Aiogram), SQLite. I care about clean architecture, performance, and pragmatic security.",
+      description: "I'm a software engineer focused on building secure, scalable backends and automation. My core stack is Python (Django, Aiogram), SQLite and PostgreSQL. I care about clean architecture, performance, and pragmatic security.",
       education: {
         schoolStudent: {
           title: 'School Student',
@@ -58,7 +58,7 @@ export const translations: Record<string, Translations> = {
         period: '2024 — Present',
         description: [
           'Completed 10+ client projects end‑to‑end from requirements to production',
-          'Built Telegram bots (Aiogram) and Flask/Django backend APIs',
+          'Built Telegram bots (Aiogram) and Django backend APIs',
           'Implemented frontend integration, authentication, payments, and admin panels',
           'Managed client communication, technical documentation, and delivery timelines'
         ]
@@ -68,7 +68,7 @@ export const translations: Record<string, Translations> = {
       title: 'Projects',
       javaefootball: {
         title: 'JavaE Football',
-        description: 'Full-stack web application for football management. Built with ReactJS frontend, Flask backend, SQLite database, and Docker containerization. Complete solution for managing football teams, players, and matches.',
+        description: 'Full-stack web application for football management. Built with ReactJS frontend, Django backend, SQLite database, and Docker containerization. Complete solution for managing football teams, players, and matches.',
         visit: 'Visit Site'
       },
       openDevUZ: {
@@ -90,6 +90,21 @@ export const translations: Record<string, Translations> = {
         title: 'PDF-books Telegram web-bot',
         description: 'A bot that helps find PDF versions of books. Includes search, categories, and fast delivery features.',
         viewCode: 'View Code'
+      },
+      stanfordacademy: {
+        title: 'Stanford Academy',
+        description: 'Educational center personal website. A modern and responsive website showcasing courses, teachers, and educational programs.',
+        visit: 'Visit Site'
+      },
+      stanfordacademyCRM: {
+        title: 'Stanford Academy CRM',
+        description: 'CRM system for educational center. Comprehensive management system for students, courses, teachers, and administrative tasks.',
+        visit: 'Visit Site'
+      },
+      tricorpCRM: {
+        title: 'TriCorp CRM',
+        description: 'CRM system for educational centers with documentation. Complete CRM solution with comprehensive documentation for managing multiple educational centers.',
+        visit: 'Visit Site'
       },
       moreProjects: {
         title: 'More Work',
@@ -143,8 +158,8 @@ export const translations: Record<string, Translations> = {
     },
     hero: {
       name: 'Shaxriyor Karimberdiyev',
-      subtitle: 'Dasturiy ta\'minot muhandisi',
-      description: "Ilg'or dasturiy infratuzilmalarni yaratish va rivojlantirish bilan shug'ullanaman. Yuqori samarali backend tizimlarini loyihalashtiraman, frontend g'oyalarini ishlab chiqaman va UI/UX dizaynni bilaman hamda ishlab chiqarish darajasidagi ilovalar uchun muhandislik jamoalarida qatnashaman.",
+      subtitle: 'Software engineer',
+      description: "Ilg'or dasturiy infratuzilmalarni yaratish va rivojlantirish bilan shug'ullanaman. Yuqori samarali backend tizimlarini loyihalashtiraman, frontend g'oyalarini ishlab chiqaman.",
       stats: {
         years: 'Yillik tajriba',
         companies: 'Kompaniyalarda ishlagan',
@@ -157,7 +172,7 @@ export const translations: Record<string, Translations> = {
     },
     about: {
       title: 'Men haqimda',
-      description: 'Men xavfsiz va kengaytiriladigan backend tizimlar va frontend dasturiy ta\'minot muhandisiman. Asosiy texnologiyalarim: Python (Flask, Aiogram), SQLite. O\'zimdan kuchli bo\'lgan communitylarda ishlashni qadrlayman.',
+      description: 'Men xavfsiz va kengaytiriladigan backend tizimlar va frontend dasturiy ta\'minot muhandisiman. Asosiy texnologiyalarim: Python (Django, Aiogram), SQLite va PostgreSQL. O\'zimdan kuchli bo\'lgan communitylarda ishlashni qadrlayman.',
       education: {
         schoolStudent: {
           title: 'Maktab o\'quvchisi',
@@ -176,7 +191,7 @@ export const translations: Record<string, Translations> = {
         languageLevels: {
           native: 'Ona tili',
           advanced: 'Yuqori',
-          basic: 'Asosiy'
+          basic: 'Boshlang\'ich'
         }
       }
     },
@@ -188,7 +203,7 @@ export const translations: Record<string, Translations> = {
         period: '2024 — Hozirgacha',
         description: [
           'Talabdan ishlab chiqarishgacha 10+ mijoz loyihalarini yakunladim',
-          'Telegram botlari (Aiogram) va Flask/Django backend API\'lar qurdim',
+          'Telegram botlari (Aiogram) va Django backend API\'lar qurdim',
           'Frontend integratsiyasi, autentifikatsiya, to\'lov va admin panel funksiyalarini joriy qildim',
           'Mijozlar bilan rasmiy muloqot, texnik hujjatlar va timeline boshqaruvini olib bordim'
         ]
@@ -198,7 +213,7 @@ export const translations: Record<string, Translations> = {
       title: 'Loyihalar',
       javaefootball: {
         title: 'JavaE Football',
-        description: 'Futbol boshqaruvi uchun to\'liq funksional veb-ilova. ReactJS frontend, Flask backend, SQLite ma\'lumotlar bazasi va Docker konteynerizatsiyasi bilan qurilgan. Futbol jamoalari, o\'yinchilar va o\'yinlarni boshqarish uchun to\'liq yechim.',
+        description: 'Futbol boshqaruvi uchun to\'liq funksional veb-ilova. ReactJS frontend, Django backend, SQLite ma\'lumotlar bazasi va Docker konteynerizatsiyasi bilan qurilgan. Futbol jamoalari, o\'yinchilar va o\'yinlarni boshqarish uchun to\'liq yechim.',
         visit: 'Saytni ko\'rish'
       },
       openDevUZ: {
@@ -220,6 +235,21 @@ export const translations: Record<string, Translations> = {
         title: 'PDF-books Telegram web-bot',
         description: 'Kitoblarning PDF versiyalarini topishga yordam beradigan bot. Qidiruv, kategoriyalar va tezkor yuborish funksiyalari mavjud.',
         viewCode: 'Kodni ko\'rish'
+      },
+      stanfordacademy: {
+        title: 'Stanford Academy',
+        description: 'O\'quv markaz shaxsiy web-sayti. Zamonaviy va moslashuvchan dizayn bilan kurslar, o\'qituvchilar va ta\'lim dasturlarini namoyish etuvchi veb-sayt.',
+        visit: 'Saytni ko\'rish'
+      },
+      stanfordacademyCRM: {
+        title: 'Stanford Academy CRM',
+        description: 'O\'quv markaz uchun CRM tizim. O\'quvchilar, kurslar, o\'qituvchilar va ma\'muriy vazifalarni boshqarish uchun keng qamrovli boshqaruv tizimi.',
+        visit: 'Saytni ko\'rish'
+      },
+      tricorpCRM: {
+        title: 'TriCorp CRM',
+        description: 'O\'quv markazlar uchun CRM tizim hujjatlari. Bir nechta o\'quv markazlarini boshqarish uchun to\'liq CRM yechimi va keng qamrovli hujjatlar.',
+        visit: 'Saytni ko\'rish'
       },
       moreProjects: {
         title: 'Yana boshqa ishlar',
@@ -261,67 +291,6 @@ export const translations: Record<string, Translations> = {
       }
     }
   },
-  es: {
-    nav: { home: 'Inicio', about: 'Sobre mí', experience: 'Experiencia', projects: 'Proyectos', skills: 'Habilidades', certifications: 'Certificados', contact: 'Contacto' },
-    hero: {
-      name: 'Shaxriyor Karimberdiyev',
-      subtitle: 'Ingeniero de software',
-      description: 'Construyo y evoluciono infraestructura de software avanzada. Diseño sistemas backend de alto rendimiento, desarrollo conceptos de frontend, comprendo el diseño UI/UX y contribuyo en equipos de ingeniería que entregan aplicaciones de nivel de producción.',
-      stats: { years: 'Años de experiencia', companies: 'Empresas', systems: 'Sistemas en producción' },
-      buttons: { viewWork: 'Ver trabajos', connect: 'Contactar' }
-    },
-    about: {
-      title: 'Sobre mí',
-      description: 'Soy ingeniero de software centrado en backends seguros y frontend. También creo bots de Telegram con Aiogram. Tecnologías: Python (Flask, Aiogram), SQLite. Valoro trabajar en comunidades fuertes.',
-      education: {
-        schoolStudent: { title: 'Estudiante de escuela', degree: 'Actualmente estudiando en la escuela', age: '17 años', description: 'Aún no tengo título universitario — estudio en la escuela y trabajo en proyectos prácticos.' }
-      },
-      skills: {
-        title: 'Habilidades blandas',
-        languages: 'Idiomas',
-        softSkills: ['Liderazgo', 'Trabajo en equipo', 'Comunicación', 'Autoestudio', 'Trabajo profundo', 'Creatividad', 'Escucha activa', 'Gestión del tiempo', 'Toma de decisiones', 'Mentoría'],
-        languageLevels: { native: 'Nativo', advanced: 'Avanzado', basic: 'Básico' }
-      }
-    },
-    experience: {
-      title: 'Experiencia',
-      freelance: {
-        title: 'Ingeniero de software freelance',
-        company: 'Autónomo — Remoto (1+ año)',
-        period: '2024 — Presente',
-        description: [
-          'Completé 10+ proyectos de clientes de punta a punta, de requisitos a producción',
-          'Construí bots de Telegram (Aiogram) y APIs backend con Flask/Django',
-          'Implementé integración frontend, autenticación, pagos y paneles de administración',
-          'Gestioné comunicación con clientes, documentación técnica y cronogramas de entrega'
-        ]
-      }
-    },
-    projects: {
-      title: 'Proyectos',
-      javaefootball: { title: 'JavaE Football', description: 'Aplicación web full-stack para gestión de fútbol. Construida con ReactJS frontend, Flask backend, base de datos SQLite y Docker containerización. Solución completa para gestionar equipos, jugadores y partidos de fútbol.', visit: 'Visitar sitio' },
-      openDevUZ: { title: 'OpenDevUZ', description: 'Plataforma web de aprendizaje con cursos de TI gratuitos y ofertas de empleo. Los usuarios pueden explorar cursos y postular a vacantes.', visit: 'Visitar sitio' },
-      shutupBot: { title: 'Shut up Telegram web-bot', description: 'Bot de moderación que ayuda a administradores a gestionar grupos, rastreando infracciones y aplicando restricciones apropiadas.', viewCode: 'Ver código' },
-      cakeSellerBot: { title: 'Cake Seller Telegram web-bot', description: 'Bot diseñado para pedir pasteles. Los usuarios pueden elegir categorías, hacer pedidos y configurar la entrega.', viewCode: 'Ver código' },
-      pdfBooksBot: { title: 'PDF-books Telegram web-bot', description: 'Bot que ayuda a encontrar versiones PDF de libros. Incluye búsqueda, categorías y funciones de envío rápido.', viewCode: 'Ver código' },
-      moreProjects: { title: 'Más trabajos', description: 'Además de estos proyectos, trabajo en proyectos pequeños y experimentos, ampliando mis habilidades mediante práctica y aprendizaje continuo.', discuss: 'Hablemos de tu proyecto' }
-    },
-    skills: { title: 'Desarrollo Full‑Stack' },
-    certifications: { title: 'Certificados' },
-    contact: {
-      title: 'Contacto',
-      sendMessage: 'Envíame un mensaje',
-      name: 'Nombre completo',
-      email: 'Correo',
-      message: 'Mensaje',
-      send: 'Enviar',
-      info: { instagram: 'Instagram', github: 'GitHub', telegram: 'Telegram', email: 'Correo', phone: 'Teléfono' }
-    },
-    footer: {
-      copyright: '© 2025 Shaxriyor Karimberdiyev. Todos los derechos reservados.',
-      links: { home: 'Inicio', about: 'Sobre mí', experience: 'Experiencia', projects: 'Proyectos', skills: 'Habilidades', certifications: 'Certificados', contact: 'Contacto' }
-    }
-  },
   ru: {
     nav: { home: 'Главная', about: 'Обо мне', experience: 'Опыт работы', projects: 'Проекты', skills: 'Навыки', certifications: 'Сертификаты', contact: 'Контакты' },
     hero: {
@@ -333,7 +302,7 @@ export const translations: Record<string, Translations> = {
     },
     about: {
       title: 'Обо мне',
-      description: 'Я инженер-программист, сосредоточенный на создании безопасных и масштабируемых backend-систем и автоматизации. Основные технологии: Python (FastAPI, Django, Flask), PostgreSQL. Также реализую автоматизацию Telegram с помощью Aiogram.',
+      description: 'Я инженер-программист, сосредоточенный на создании безопасных и масштабируемых backend-систем и автоматизации. Основные технологии: Python (Django, Aiogram), SQLite и PostgreSQL. Также реализую автоматизацию Telegram с помощью Aiogram.',
       education: {
         schoolStudent: { title: 'Школьный ученик', degree: 'В настоящее время учусь в школе', age: '17 лет', description: 'У меня пока нет университетской степени — учусь в школе и работаю над практическими проектами.' }
       },
@@ -352,7 +321,7 @@ export const translations: Record<string, Translations> = {
         period: '2024 — Настоящее время',
         description: [
           'Выполнил 10+ клиентских проектов от требований до продакшена',
-          'Разработал Telegram‑ботов (Aiogram) и backend API на Flask/Django',
+          'Разработал Telegram‑ботов (Aiogram) и backend API на Django',
           'Реализовал фронтенд‑интеграцию, аутентификацию, платежи и админ‑панели',
           'Вёл коммуникацию с заказчиками, техдокументацию и графики поставок'
         ]
@@ -360,11 +329,14 @@ export const translations: Record<string, Translations> = {
     },
     projects: {
       title: 'Проекты',
-      javaefootball: { title: 'JavaE Football', description: 'Полнофункциональное веб‑приложение для управления футболом. Построено с ReactJS frontend, Flask backend, базой данных SQLite и Docker контейнеризацией. Полное решение для управления футбольными командами, игроками и матчами.', visit: 'Перейти на сайт' },
+      javaefootball: { title: 'JavaE Football', description: 'Полнофункциональное веб‑приложение для управления футболом. Построено с ReactJS frontend, Django backend, базой данных SQLite и Docker контейнеризацией. Полное решение для управления футбольными командами, игроками и матчами.', visit: 'Перейти на сайт' },
       openDevUZ: { title: 'OpenDevUZ', description: 'Образовательная веб‑платформа с бесплатными IT‑курсами и вакансиями. Пользователи могут изучать курсы и откликаться на вакансии.', visit: 'Перейти на сайт' },
       shutupBot: { title: 'Shut up Telegram web-bot', description: 'Бот‑модератор, помогающий администраторам управлять группами: отслеживает нарушения и применяет необходимые ограничения.', viewCode: 'Посмотреть код' },
       cakeSellerBot: { title: 'Cake Seller Telegram web-bot', description: 'Бот для оформления заказов на торты. Пользователь выбирает категории, оформляет заказ и настраивает доставку.', viewCode: 'Посмотреть код' },
       pdfBooksBot: { title: 'PDF-books Telegram web-bot', description: 'Бот для поиска PDF‑версий книг. Включает поиск, категории и быстрые отправки.', viewCode: 'Посмотреть код' },
+      stanfordacademy: { title: 'Stanford Academy', description: 'Личный веб‑сайт образовательного центра. Современный и адаптивный веб‑сайт, демонстрирующий курсы, преподавателей и образовательные программы.', visit: 'Перейти на сайт' },
+      stanfordacademyCRM: { title: 'Stanford Academy CRM', description: 'CRM‑система для образовательного центра. Комплексная система управления для студентов, курсов, преподавателей и административных задач.', visit: 'Перейти на сайт' },
+      tricorpCRM: { title: 'TriCorp CRM', description: 'CRM‑система для образовательных центров с документацией. Полное CRM‑решение с комплексной документацией для управления несколькими образовательными центрами.', visit: 'Перейти на сайт' },
       moreProjects: { title: 'Больше работ', description: 'Помимо этих проектов, я занимаюсь небольшими проектами и экспериментами, постоянно расширяя навыки на практике.', discuss: 'Обсудить ваш проект' }
     },
     skills: { title: 'Полнофункциональная разработка' },

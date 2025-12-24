@@ -1,4 +1,4 @@
-export type Language = 'en' | 'uz' | 'es' | 'ru'
+export type Language = 'en' | 'uz' | 'ru'
 export type Theme = 'light' | 'dark'
 
 export interface Translations {
@@ -82,6 +82,21 @@ export interface Translations {
       title: string
       description: string
       viewCode: string
+    }
+    stanfordacademy: {
+      title: string
+      description: string
+      visit: string
+    }
+    stanfordacademyCRM: {
+      title: string
+      description: string
+      visit: string
+    }
+    tricorpCRM: {
+      title: string
+      description: string
+      visit: string
     }
     moreProjects: {
       title: string
