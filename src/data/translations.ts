@@ -182,11 +182,11 @@ export const translations: Record<string, Translations> = {
         }
       },
       skills: {
-        title: 'Yumshoq ko\'nikmalar',
+        title: 'Soft Skills',
         languages: 'Tillar',
         softSkills: [
-          'Liderlik', 'Jamoa ishi', 'Muloqot', 'O\'z-o\'zini o\'qitish', 'Chuqur ish',
-          'Ijodkorlik', 'Faol tinglash', 'Vaqtni boshqarish', 'Qaror qabul qilish', 'Mentorlik'
+          'Liderlik', 'Jamoaviy ishlash', 'Muloqot', 'O\'sishga ishtiyoq',
+          'Ijodkorlik', 'Vaqtni boshqarish', 'Qaror qabul qilish', 'Mentorlik'
         ],
         languageLevels: {
           native: 'Ona tili',
@@ -199,7 +199,7 @@ export const translations: Record<string, Translations> = {
       title: 'Ish tajribasi',
       freelance: {
         title: 'Freelance Dasturiy ta\'minot muhandisi',
-        company: 'O\'z‑o\'zini band qilgan — Masofadan (1+ yil)',
+        company: ' Freelancer — Masofadan (1+ yil)',
         period: '2024 — Hozirgacha',
         description: [
           'Talabdan ishlab chiqarishgacha 10+ mijoz loyihalarini yakunladim',
